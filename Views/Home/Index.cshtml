@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h3>Logado</h3>
+</div>
+
+@if (Session["nomeUsuarioLogado"] != null)
+{
+    <text>
+       <h3> BemVindo @Session["nomeUsuarioLogado"].ToString() </h3>
+    </text>
+<div class="container">
+    <div class="jumbotron">
+        <h2>Cadastro de funcionario</h2>
+    </div>
+    <div>
+        <iframe src=”./Produtos/Create.cshtml”>Incluir Funcionário</iframe>
+    </div>
+
+</div>
+}
+

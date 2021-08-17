@@ -1,0 +1,92 @@
+﻿@model Mvc_Imagem.Models.funcionariosViewModel
+
+<h1>Novo funcionarios</h1>
+<hr />
+@using (Html.BeginForm("Create", "funcionarios",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nome, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Nome,
+                               new { @class = "form-control", @placeholder = "Nome do funcionario" })
+            @Html.ValidationMessageFor(m => m.Nome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.sobrenome, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.sobrenome,
+                               new { @class = "form-control", @placeholder = "sobrenome do funcionario" })
+            @Html.ValidationMessageFor(m => m.sobrenome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.cep, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.cep,
+                               new { @class = "form-control", @placeholder = "cep do funcionario" })
+            @Html.ValidationMessageFor(m => m.cep, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.estado, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.estado,
+                               new { @class = "form-control", @placeholder = "estado do funcionario" })
+            @Html.ValidationMessageFor(m => m.estado, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.cidade, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.cidade,
+                               new { @class = "form-control", @placeholder = "cidade do funcionario" })
+            @Html.ValidationMessageFor(m => m.cidade, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.logradouro, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.logradouro,
+                               new { @class = "form-control", @placeholder = "logradouro do funcionario" })
+            @Html.ValidationMessageFor(m => m.logradouro, "", new { @class = "text-danger" })
+        </div>
+    </div>
+     <div class="form-group">
+        @Html.LabelFor(m => m.email, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.email,
+                               new { @class = "form-control", @placeholder = "email do funcionario" })
+            @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.telefone, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.telefone,
+                               new { @class = "form-control", @placeholder = "telefone do funcionario" })
+            @Html.ValidationMessageFor(m => m.telefone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    </div>
+
+    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Salvar funcionario" class="btn btn-success" />
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-danger" })
+        </div>
+    </div>
+</div>
+}
+<div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

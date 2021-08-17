@@ -1,0 +1,78 @@
+﻿@model Mvc_Imagem.Models.funcionarios
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes do funcionarios</h2>
+<hr />
+<div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Nome, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Nome,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.sobrenome, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.sobrenome,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.cep, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.cep,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.estado, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.estado,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.cidade, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.cidade,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>     <div class="form-group">
+            @Html.LabelFor(m => m.logradouro, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.logradouro,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.email,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.telefone, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.telefone,
+                                   new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+
+
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Retornar", "Index", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+</div>

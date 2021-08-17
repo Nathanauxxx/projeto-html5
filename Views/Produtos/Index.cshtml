@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Mvc_Imagem.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Produtos</h2>
+<p>
+    @Html.ActionLink("Incluir Novo Produto","Create","Produtos", new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.sobrenome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logradouro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cep)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.sobrenome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cep)
+    </td>
+    th>
+    @Html.DisplayNameFor(model => model.estado)
+    </th>
+    th >
+            @Html.DisplayNameFor(model => model.cidade)
+</th>
+    th>
+            @Html.DisplayNameFor(model => model.logradouro)
+        </th>
+    th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+    th>
+            @Html.DisplayNameFor(model => model.telefone)
+        </th>
+<td>
+    @Html.ActionLink("Editar", "Edit", new { id = item.funcionariosId }) |
+    @Html.ActionLink("Detalhes", "Details", new { id = item.funcionariosId}) |
+    @Html.ActionLink("Deletar", "Delete", new { id = item.funcionariosId })
+</td>
+</tr>
+}
+
+</table>
